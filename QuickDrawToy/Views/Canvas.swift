@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  Canvas.swift
 //  QuickDrawToy
 //
 //  Created by tax_k on 02/02/2019.
@@ -9,6 +9,16 @@
 import UIKit
 
 class Canvas:UIView {
+    func undo(){
+        _ = lines.popLast()
+        setNeedsDisplay()
+    }
+    
+    func clear(){
+        lines.removeAll()
+        setNeedsDisplay()
+    }
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
@@ -46,25 +56,10 @@ class Canvas:UIView {
         }
         
         
-        guard var lastLine = lines.last else { return }
+        guard var lastLine = lines.popLast() else { return }
         lastLine.append(point)
         lines.append(lastLine)
         
         setNeedsDisplay()
     }
 }
-
-class ViewController: UIViewController {
-    
-    let canvas = Canvas()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.addSubview(canvas)
-        canvas.backgroundColor = .white
-        canvas.frame = view.frame
-    }
-
-}
-

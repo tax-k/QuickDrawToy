@@ -12,6 +12,7 @@
 		608C21A32205B22F007A2BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608C21A12205B22F007A2BBC /* Main.storyboard */; };
 		608C21A52205B231007A2BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608C21A42205B231007A2BBC /* Assets.xcassets */; };
 		608C21A82205B231007A2BBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608C21A62205B231007A2BBC /* LaunchScreen.storyboard */; };
+		608C21B12205BC08007A2BBC /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608C21B02205BC08007A2BBC /* Canvas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		608C21A42205B231007A2BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		608C21A72205B231007A2BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		608C21A92205B231007A2BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		608C21B02205BC08007A2BBC /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		608C219C2205B22E007A2BBC /* QuickDrawToy */ = {
 			isa = PBXGroup;
 			children = (
+				608C21B22205BC76007A2BBC /* Controller */,
+				608C21AF2205BBF6007A2BBC /* Views */,
 				608C219D2205B22E007A2BBC /* AppDelegate.swift */,
-				608C219F2205B22E007A2BBC /* ViewController.swift */,
 				608C21A12205B22F007A2BBC /* Main.storyboard */,
 				608C21A42205B231007A2BBC /* Assets.xcassets */,
 				608C21A62205B231007A2BBC /* LaunchScreen.storyboard */,
 				608C21A92205B231007A2BBC /* Info.plist */,
 			);
 			path = QuickDrawToy;
+			sourceTree = "<group>";
+		};
+		608C21AF2205BBF6007A2BBC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				608C21B02205BC08007A2BBC /* Canvas.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		608C21B22205BC76007A2BBC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				608C219F2205B22E007A2BBC /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,7 @@
 			files = (
 				608C21A02205B22E007A2BBC /* ViewController.swift in Sources */,
 				608C219E2205B22E007A2BBC /* AppDelegate.swift in Sources */,
+				608C21B12205BC08007A2BBC /* Canvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7C5R9X9Z2N;
 				INFOPLIST_FILE = QuickDrawToy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7C5R9X9Z2N;
 				INFOPLIST_FILE = QuickDrawToy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
